@@ -59,14 +59,25 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: const Text("Home"),
+          title: const Text("VNPAY DEMO"),
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Form(
               key: _fromKey,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  Container(
+                    margin: const EdgeInsets.only(
+                      top: 20,
+                    ),
+                    child: const Text(
+                      'Tạo mới đơn hàng',
+                      style:
+                          TextStyle(fontSize: 28, fontWeight: FontWeight.w600),
+                    ),
+                  ),
                   Container(
                     margin: const EdgeInsets.only(
                       top: 20,
@@ -89,7 +100,7 @@ class _HomePageState extends State<HomePage> {
                         color: Colors.blue,
                       ),
                       decoration: InputDecoration(
-                          labelText: "Loại đơn hàng",
+                          labelText: "Loại hàng hoá",
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10))),
                     ),
